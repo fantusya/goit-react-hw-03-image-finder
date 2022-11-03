@@ -21,6 +21,7 @@ class App extends Component {
     queryImg: '',
     searchedImgs: null,
     page: 1,
+    total: 0,
     error: null,
     status: Status.IDLE,
   };
@@ -40,7 +41,8 @@ class App extends Component {
       try {
         const images = await fetchImages(nextImg, this.state.page);
         this.setState(prevState => ({
-          searchedImgs: [...prevState.searchedImgs, ...images],
+          searchedImgs: [...prevState.searchedImgs, ...images.hits],
+          total: images.total,
           status: Status.RESOLVED,
         }));
       } catch (error) {
@@ -50,7 +52,7 @@ class App extends Component {
   }
 
   handleSubmit = queryImg => {
-    this.setState({ queryImg, searchedImgs: [], page: 1 });
+    this.setState({ queryImg, searchedImgs: [], page: 1, total: 0 });
   };
 
   handleMore = e => {
@@ -60,7 +62,7 @@ class App extends Component {
   };
 
   render() {
-    const { searchedImgs, status } = this.state;
+    const { searchedImgs, status, total } = this.state;
 
     return (
       <Box minHeight="100%" display="flex" flexDirection="column">
@@ -71,9 +73,9 @@ class App extends Component {
           {status === 'rejected' && <ErrorMessage />}
           {status === 'resolved' && <ImageGallery images={searchedImgs} />}
         </Box>
-        {searchedImgs && status === 'resolved' && (
-          <Button onClick={this.handleMore} />
-        )}
+        {searchedImgs &&
+          status === 'resolved' &&
+          searchedImgs.length < total && <Button onClick={this.handleMore} />}
       </Box>
     );
   }
