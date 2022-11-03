@@ -1,5 +1,13 @@
 import React, { Component } from 'react';
 
+import {
+  Header,
+  Form,
+  Input,
+  ButtonSearch,
+  MdImageSearch,
+} from './Searchbar.styled';
+
 class SearchBar extends Component {
   state = {
     queryImg: '',
@@ -23,12 +31,9 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <header className="searchbar">
-        <form onSubmit={this.handleSubmit}>
-          <button type="submit">
-            <span>Search</span>
-          </button>
-          <input
+      <Header>
+        <Form onSubmit={this.handleSubmit}>
+          <Input
             onChange={this.handleChange}
             value={this.state.queryImg}
             type="text"
@@ -36,8 +41,11 @@ class SearchBar extends Component {
             autoFocus
             placeholder="Search images and photos"
           />
-        </form>
-      </header>
+          <ButtonSearch type="submit">
+            <MdImageSearch size={28} />
+          </ButtonSearch>
+        </Form>
+      </Header>
     );
   }
 }

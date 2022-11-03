@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { createPortal } from 'react-dom';
 
+import { ModalBackdrop, ModalContent } from './Modal.styled';
+
 const modalRoot = document.querySelector('#modal-root');
 
 // const Modal = ({ onClose, children }) => {
@@ -33,9 +35,9 @@ class Modal extends Component {
 
   render() {
     return createPortal(
-      <div onClick={this.handleBackdropClick}>
-        <div>{this.props.children}</div>
-      </div>,
+      <ModalBackdrop onClick={this.handleBackdropClick}>
+        <ModalContent>{this.props.children}</ModalContent>
+      </ModalBackdrop>,
       modalRoot
     );
   }
