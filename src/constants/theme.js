@@ -2,15 +2,16 @@ export const theme = {
   colors: {
     white: '#fff',
     red: '#B22222',
-    silver: '#C0C0C0',
-    text: '#4682B4',
-    accent: '#F0F8FF',
-    border: '#add8e6',
+    accent: '#302b63',
+    border: '#FFFFE0',
+    bgInput: 'rgba(255, 255, 255, 0.3)',
+    bgIcon: 'rgba(255, 255, 255, 0.4)',
+    bgBackdrop: 'rgba(0, 0, 0, 0.5)',
     transparent: 'transparent',
   },
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
   fonts: {
-    body: 'Arial, sans-serif',
+    body: ' Courier New',
     heading: 'Impact',
     monospace: 'Menlo, monospace',
   },
@@ -34,10 +35,11 @@ export const theme = {
   borders: {
     none: 'none',
     normal: '1px solid',
+    doubled: '2px solid',
   },
   radii: {
     none: '0',
-    normal: '15px',
+    normal: '20px',
     round: '50%',
   },
   transition: {
