@@ -15,15 +15,13 @@ const fetchImages = async (queryImg, page) => {
     },
   });
 
-  console.log(response);
-
   if (response.data.total === 0) {
-    return Promise.reject(new Error(`Нет картинок с именем ${queryImg}`));
+    return Promise.reject(new Error(`Ooops! No images with ${queryImg}`));
   } else {
-    return response.data.hits;
+    const total = response.data.total;
+    const hits = response.data.hits;
+    return { total, hits };
   }
-
-  //   return response.data.hits;
 };
 
 export default fetchImages;
