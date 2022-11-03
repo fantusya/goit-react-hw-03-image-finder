@@ -1,4 +1,4 @@
-import errorImg from 'images/error.png';
+import errorImg from 'images/error.jpg';
 
 import { ErrorImage } from './ErrorMessage.styled';
 

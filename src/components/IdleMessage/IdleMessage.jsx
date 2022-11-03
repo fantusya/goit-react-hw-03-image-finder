@@ -1,4 +1,4 @@
-import idleImg from 'images/idle.png';
+import idleImg from 'images/idle.jpg';
 
 import { IdleImage } from './IdleMessage.styled';
 
