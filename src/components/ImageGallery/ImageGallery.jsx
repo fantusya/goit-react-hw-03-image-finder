@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Box } from 'components/Box/Box';
 import ImageGalleryItem from 'components/ImageGalleryItem';
 
@@ -23,3 +24,7 @@ export const ImageGallery = ({ images }) => {
 };
 
 export default ImageGallery;
+
+ImageGallery.propTypes = {
+  images: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
