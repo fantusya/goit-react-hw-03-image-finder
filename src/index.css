@@ -7,10 +7,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
-  /* background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),url('./images/img.jpg');
-  background-attachment: fixed; */
-  /* background-color: rgba(48, 43, 99, 0.9); */
-  /* background-color: #FFFFE0; */
+  background-image: url('./images/img.jpg');
+  background-attachment: fixed; 
 }
 
 code {
