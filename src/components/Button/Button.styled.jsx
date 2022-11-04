@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const LoadMoreButton = styled.button`
-  margin: ${p => p.theme.space[0]}px auto ${p => p.theme.space[5]}px auto;
+  margin: ${p => p.theme.space[5]}px auto ${p => p.theme.space[5]}px auto;
   padding: ${p => p.theme.space[4]}px ${p => p.theme.space[5]}px;
   display: block;
 
@@ -10,7 +10,7 @@ export const LoadMoreButton = styled.button`
   text-align: center;
   text-transform: uppercase;
 
-  box-shadow: 0 0 20px ${p => p.theme.colors.accent};
+  box-shadow: 0 0 20px ${p => p.theme.colors.white};
   border: ${p => p.theme.borders.normal} ${p => p.theme.colors.transparent};
   outline: none;
 

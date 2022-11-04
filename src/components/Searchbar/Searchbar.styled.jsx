@@ -8,9 +8,10 @@ export const Header = styled.header`
 
   background: #0f0c29;
   background: linear-gradient(to left, #24243e, #302b63, #0f0c29);
-  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 5px 8px 0px rgba(255, 255, 224, 0.5);
+  border-bottom: 1px dotted rgba(255, 255, 224, 0.5);
+  /* -webkit-box-shadow: 0px 4px 5px 0px rgba(255, 255, 224, 0.5);
+  -moz-box-shadow: 0px 4px 5px 0px rgba(255, 255, 224, 0.5); */
 `;
 
 export const Form = styled.form`

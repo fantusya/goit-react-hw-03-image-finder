@@ -1,15 +1,7 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
-export const ImageItem = styled.li`
-  width: calc((100% - 24px) / 4);
-  height: 244px;
-
-  &:hover {
-    animation: wobble-hor-bottom 0.8s both;
-  }
-
-  @keyframes wobble-hor-bottom {
-    0%,
+const wobbleBottom = keyframes`
+  0%,
     100% {
       transform: translateX(0%);
       transform-origin: 50% 50%;
@@ -29,16 +21,27 @@ export const ImageItem = styled.li`
     75% {
       transform: translateX(-2px) rotate(-0.6deg);
     }
+`;
+
+export const ImageItem = styled.li`
+  /* box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.75); */
+  box-shadow: 0px 3px 10px 0px rgba(255, 255, 224, 0.5);
+  border: 1px solid rgba(255, 255, 224, 0.5);
+  border-radius: 20px;
+  &:hover {
+    animation: ${wobbleBottom} 0.8s both;
   }
 `;
 
 export const Image = styled.img`
   width: 100%;
-  height: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 20px;
 `;
 
 export const ModalImage = styled.img`
-  width: 100%;
-  height: 100%;
   background-color: ${p => p.theme.colors.white};
 `;
