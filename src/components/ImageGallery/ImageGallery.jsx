@@ -6,7 +6,7 @@ import { ImagesList } from './ImageGallery.styled';
 
 export const ImageGallery = ({ images }) => {
   return (
-    <Box px={4} pb={5}>
+    <Box px={4} pt={5}>
       <ImagesList>
         {images.map(image => {
           return (

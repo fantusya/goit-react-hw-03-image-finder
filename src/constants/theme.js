@@ -7,6 +7,7 @@ export const theme = {
     bgInput: 'rgba(255, 255, 255, 0.3)',
     bgIcon: 'rgba(255, 255, 255, 0.4)',
     bgBackdrop: 'rgba(0, 0, 0, 0.5)',
+    secondary: '#a59575',
     transparent: 'transparent',
   },
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
